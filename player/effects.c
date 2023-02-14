@@ -2052,7 +2052,7 @@ void csf_process_effects(song_t *csf, int firsttick)
 		chan->flags &= ~(CHN_FASTVOLRAMP | CHN_NEWNOTE);
 
 		// set instrument before doing anything else
-		if (instr && start_note) chan->new_instrument = instr;
+		if (instr) chan->new_instrument = instr;
 
 		/* Have to handle SDx specially because of the way the effects are structured.
 		In a PERFECT world, this would be very straightforward:
